@@ -7,12 +7,17 @@ export type ProductsType = {
 
 type propductType = {
     title: string;
+    isFruit: boolean;
     id: number;
 };
 
 export const Products: FC<ProductsType> = ({ title, products }) => {
     const renderProducts = products.map((p) => {
-        return <li key={p.id}>{p.title}</li>;
+        return (
+            <li key={p.id}>
+                {p.title} {p.isFruit}
+            </li>
+        );
     });
     return (
         <div className="products_item">
