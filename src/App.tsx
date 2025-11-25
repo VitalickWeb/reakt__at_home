@@ -18,11 +18,15 @@ export const App = () => {
 
     const title = "My academic project";
 
+    const onButtonHandler = () => {
+        console.log("call of callback fuction");
+    };
+
     return (
         <div>
             <Users users={user} title={title} />
 
-            <Button title="Button" />
+            <Button title="Button" onClick={onButtonHandler} />
 
             <div className="avatar_box">
                 <img className="avatar" alt="" />

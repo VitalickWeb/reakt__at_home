@@ -1,5 +1,6 @@
 import type { FC } from "react";
-import styled from "styled-components";
+import st from "./Products.module.css"; // <-- Импорт модульных стилей
+
 export type ProductsType = {
     title: string;
     products: propductType[];
@@ -10,41 +11,22 @@ type propductType = {
     isFruit: boolean;
     id: number;
 };
-interface ProdListItemsProps {
-    isFruit: boolean;
-}
+
 export const Products: FC<ProductsType> = ({ title, products }) => {
     const renderProducts = products.map((p) => {
+        const itemClass = p.isFruit ? st.fruit : st.vegetable;
+
         return (
-            <ProdListItems key={p.id} isFruit={p.isFruit}>
-                {p.title} {p.isFruit ? "фрукт" : "овощ"}
-            </ProdListItems>
+            <li key={p.id} className={`${st.productItem} ${itemClass}`}>
+                {p.title} ({p.isFruit ? "фрукт" : "овощ"})
+            </li>
         );
     });
+
     return (
-        <ProductsItem>
-            <ProdBox>
-                <h2>{title}</h2>
-                <ProductsList>{renderProducts}</ProductsList>
-            </ProdBox>
-        </ProductsItem>
+        <div className="products_item">
+            <h2>{title}</h2>
+            <ul className="products">{renderProducts}</ul>
+        </div>
     );
 };
-
-const ProductsItem = styled.div`
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 10px;
-    background-color: #4f6b40ff;
-`;
-const ProdBox = styled.div``;
-const ProductsList = styled.div`
-    border: 1px solid #efd22dff;
-    padding: 15px;
-    margin-bottom: 10px;
-    background-color: #6eb847ff;
-`;
-const ProdListItems = styled.div<ProdListItemsProps>`
-    list-type-style: none;
-    color: ${(props) => (props.isFruit ? "magenta" : "darkgreen")};
-`;
