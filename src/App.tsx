@@ -21,15 +21,20 @@ export const App = () => {
 
     const [count, setCount] = useState(0);
 
-    const onButtonHandler = () => {
+    const onCountHandler = () => {
         setCount(count + 1);
+    };
+
+    const onResetHandler = () => {
+        setCount(0);
     };
 
     return (
         <div>
             <Users users={user} title={title} count={count} />
 
-            <Button title="Button" onClick={onButtonHandler} />
+            <Button title="Count" onClick={onCountHandler} />
+            <Button title="Reset" onClick={onResetHandler} />
 
             <div className="avatar_box">
                 <img className="avatar" alt="" />
