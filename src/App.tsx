@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import { Button } from "./components/Button/Button";
 import { Products } from "./components/Products/Products";
@@ -18,13 +19,15 @@ export const App = () => {
 
     const title = "My academic project";
 
+    const [count, setCount] = useState(0);
+
     const onButtonHandler = () => {
-        console.log("call of callback fuction");
+        setCount(count + 1);
     };
 
     return (
         <div>
-            <Users users={user} title={title} />
+            <Users users={user} title={title} count={count} />
 
             <Button title="Button" onClick={onButtonHandler} />
 

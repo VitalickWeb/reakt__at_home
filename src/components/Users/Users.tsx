@@ -8,9 +8,10 @@ export type UserType = {
 export type UsersType = {
     title: string;
     users: UserType;
+    count: number;
 };
 
-export const Users: FC<UsersType> = ({ title, users }) => {
+export const Users: FC<UsersType> = ({ title, users, count }) => {
     return (
         <div className="">
             <h2 className="name">{title}</h2>
@@ -23,6 +24,7 @@ export const Users: FC<UsersType> = ({ title, users }) => {
                 }}
             />
             <div>{`Photo of ${users.name}`}</div>
+            <div>{count}</div>
         </div>
     );
 };
