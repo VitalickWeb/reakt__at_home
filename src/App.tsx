@@ -3,6 +3,7 @@ import "./App.css";
 import { Button } from "./components/Button/Button";
 import { Products } from "./components/Products/Products";
 import { Users } from "./components/Users/Users";
+import { Gallery } from "./components/Gallery/Gallery";
 
 export const App = () => {
     const user = {
@@ -41,6 +42,8 @@ export const App = () => {
             </div>
 
             <Products title="Products" products={products} />
+
+            <Gallery />
         </div>
     );
 };
