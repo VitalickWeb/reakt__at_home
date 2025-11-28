@@ -4,6 +4,7 @@ import { Button } from "./components/Button/Button";
 import { Products } from "./components/Products/Products";
 import { Users } from "./components/Users/Users";
 import { Gallery } from "./components/Gallery/Gallery";
+import { TodoList } from "./components/TodoList/TodoList";
 
 export const App = () => {
     const user = {
@@ -32,6 +33,8 @@ export const App = () => {
 
     return (
         <div>
+            <TodoList imageUrl={user.imageUrl} name={user.name} />
+
             <Users users={user} title={title} count={count} />
 
             <Button title="Count" onClick={onCountHandler} />
