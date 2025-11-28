@@ -1,0 +1,16 @@
+.darkTheme {
+    background-color: black;
+    color: pink;
+}
+
+.lightTheme {
+    background-color: rgb(92, 150, 95); /* Если это твоя альтернативная тема */
+    color: black;
+}
+
+/* ... остальные стили ... */
+.photo {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}

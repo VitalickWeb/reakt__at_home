@@ -1,13 +1,20 @@
 import type { FC } from "react";
+import st from "./TodoList.module.css";
 
 export type TodoListType = {
     imageUrl: string;
     name: string;
+    themeStyle: {
+        backgroundColor: string;
+        color: string;
+    };
 };
-export const TodoList: FC<TodoListType> = ({ imageUrl, name }) => {
+export const TodoList: FC<TodoListType> = ({ imageUrl, name, themeStyle }) => {
+    const themeClass = themeStyle ? st.darkTheme : st.lightTheme;
+
     return (
-        <div>
-            <h1>Hedy Lamarr's Todos</h1>
+        <div className={themeClass}>
+            <h1 className={themeClass}>{name}</h1>
             <img src={imageUrl} alt={name} className="photo" />
             <ul>
                 <li>Invent new traffic lights</li>

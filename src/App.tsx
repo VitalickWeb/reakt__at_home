@@ -7,6 +7,13 @@ import { Gallery } from "./components/Gallery/Gallery";
 import { TodoList } from "./components/TodoList/TodoList";
 
 export const App = () => {
+    const person = {
+        name: "Gregorio Y. Zara",
+        theme: {
+            backgroundColor: "black",
+            color: "pink",
+        },
+    };
     const user = {
         name: "Hedy Lamarr",
         imageUrl: "https://i.imgur.com/yXOvdOSs.jpg",
@@ -33,7 +40,11 @@ export const App = () => {
 
     return (
         <div>
-            <TodoList imageUrl={user.imageUrl} name={user.name} />
+            <TodoList
+                imageUrl={user.imageUrl}
+                name={person.name}
+                themeStyle={person.theme}
+            />
 
             <Users users={user} title={title} count={count} />
 
