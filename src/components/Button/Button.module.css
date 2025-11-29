@@ -9,3 +9,9 @@
     cursor: pointer;
     transition: border-color 0.25s;
 }
+.button_container {
+    display: flex;
+    justify-content: flex-start;
+
+    padding: 10px 0 0 10px;
+}

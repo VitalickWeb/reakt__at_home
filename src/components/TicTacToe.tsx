@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import { Button } from "./Button/Button";
+import st from "./TicTacToe.module.css";
 
 export type SquareType = {
     title: string;
@@ -12,7 +13,7 @@ export const Square: FC<SquareType> = ({ title, onClick }) => {
     };
 
     return (
-        <div className="square">
+        <div className={st.square}>
             <Button title={title} onClick={onSquareHandler} />
         </div>
     );
