@@ -5,6 +5,7 @@ import { Products } from "./components/Products/Products";
 import { Users } from "./components/Users/Users";
 import { Gallery } from "./components/Gallery/Gallery";
 import { TodoList } from "./components/TodoList/TodoList";
+import { Square } from "./components/TicTacToe";
 
 export const App = () => {
     const person = {
@@ -26,6 +27,13 @@ export const App = () => {
         { title: "Apple", isFruit: true, id: 3 },
     ];
 
+    const image = {
+        img: {
+            src: "https://i.imgur.com/MK3eW3As.jpg",
+            alt: "Katherine Johnson",
+        },
+    };
+
     const title = "My academic project";
 
     const [count, setCount] = useState(0);
@@ -38,18 +46,21 @@ export const App = () => {
         setCount(0);
     };
 
+    const onSquareHandler = () => {};
+
     return (
         <div>
+            <Square title="X" onClick={onSquareHandler} />
+
+            <Users users={user} title={title} count={count} />
+            <Button title="Count" onClick={onCountHandler} />
+            <Button title="Reset" onClick={onResetHandler} />
+
             <TodoList
                 imageUrl={user.imageUrl}
                 name={person.name}
                 themeStyle={person.theme}
             />
-
-            <Users users={user} title={title} count={count} />
-
-            <Button title="Count" onClick={onCountHandler} />
-            <Button title="Reset" onClick={onResetHandler} />
 
             <div className="avatar_box">
                 <img className="avatar" alt="" />
@@ -57,7 +68,7 @@ export const App = () => {
 
             <Products title="Products" products={products} />
 
-            <Gallery />
+            <Gallery galery={image.img} />
         </div>
     );
 };
