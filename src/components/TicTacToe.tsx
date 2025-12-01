@@ -13,8 +13,24 @@ export const Square: FC<SquareType> = ({ title, onClick }) => {
     };
 
     return (
-        <div className={st.square}>
-            <Button title={title} onClick={onSquareHandler} />
+        <div className={st.block_square}>
+            <div className={st.square}>
+                <div className={st.square_row}>
+                    <Button title={title} onClick={onSquareHandler} />
+                    <Button title={title} onClick={onSquareHandler} />
+                    <Button title={title} onClick={onSquareHandler} />
+                </div>
+                <div className={st.square_row}>
+                    <Button title={title} onClick={onSquareHandler} />
+                    <Button title={title} onClick={onSquareHandler} />
+                    <Button title={title} onClick={onSquareHandler} />
+                </div>
+                <div className={st.square_row}>
+                    <Button title={title} onClick={onSquareHandler} />
+                    <Button title={title} onClick={onSquareHandler} />
+                    <Button title={title} onClick={onSquareHandler} />
+                </div>
+            </div>
         </div>
     );
 };
