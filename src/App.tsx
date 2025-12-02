@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
 import "./App.css";
 import { Button } from "./components/Button/Button";
@@ -5,7 +6,7 @@ import { Products } from "./components/Products/Products";
 import { Users } from "./components/Users/Users";
 import { Gallery } from "./components/Gallery/Gallery";
 import { TodoList } from "./components/TodoList/TodoList";
-import { Square } from "./components/TicTacToe";
+import { Board } from "./components/TicTacToe";
 
 export const App = () => {
     const person = {
@@ -48,9 +49,13 @@ export const App = () => {
 
     const onSquareHandler = () => {};
 
+    const [arrNums, setArrNums] = useState<number[]>([
+        1, 2, 3, 4, 5, 6, 7, 8, 9,
+    ]);
+
     return (
-        <div>
-            <Square title="X" onClick={onSquareHandler} />
+        <>
+            <Board title="" arrNums={arrNums} onClick={onSquareHandler} />
 
             <Users users={user} title={title} count={count} />
             <Button title="Count" onClick={onCountHandler} />
@@ -69,6 +74,6 @@ export const App = () => {
             <Products title="Products" products={products} />
 
             <Gallery galery={image.img} />
-        </div>
+        </>
     );
 };
