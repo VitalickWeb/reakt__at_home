@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
 import "./App.css";
 import { Button } from "./components/Button/Button";
@@ -49,7 +48,7 @@ export const App = () => {
 
     const onSquareHandler = () => {};
 
-    const [arrNums, setArrNums] = useState<number[]>([
+    const arrNums: number[] = ([
         1, 2, 3, 4, 5, 6, 7, 8, 9,
     ]);
 

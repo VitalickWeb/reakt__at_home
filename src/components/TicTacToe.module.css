@@ -11,12 +11,11 @@ table {
     overflow: hidden; /* Важно, чтобы тень и скругление работали корректно */
 }
 td {
-    padding: 5px; /* Небольшой отступ вокруг кнопок */
-    border: 1px solid #ddd; /* Легкие разделители между ячейками */
+    padding: 5px;
+    border: 1px solid #ddd;
 }
 
 .board_row {
-    /* Дополнительные стили, если нужны, например, для выравнивания */
     display: flex;
     justify-content: center;
     align-items: center;
