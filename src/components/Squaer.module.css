@@ -1,0 +1,9 @@
+button.squaer {
+    width: 45px;
+    height: 45px;
+    font-weight: 500;
+    background-color: rgba(76, 77, 92, 0.438);
+    font-size: 18px;
+    text-align: center;
+    border: none;
+}

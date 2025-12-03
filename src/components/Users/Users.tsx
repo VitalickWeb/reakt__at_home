@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import st from "./User.module.css";
 
 export type UserType = {
     name: string;
@@ -14,7 +15,7 @@ export type UsersType = {
 export const Users: FC<UsersType> = ({ title, users, count }) => {
     return (
         <div className="">
-            <h2 className="name">{title}</h2>
+            <h2 className={st.name}>{title}</h2>
             <img
                 src={users.imageUrl}
                 alt={"Photo of " + users.name}

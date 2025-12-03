@@ -1,9 +1,16 @@
-import type { FC } from "react";
+import { useState } from "react";
+import st from "./Squaer.module.css";
 
-export type SquareType = {
-    numbers: number;
-};
+export const Square = () => {
+    const [value, setValue] = useState<string | null>(null);
 
-export const Square: FC<SquareType> = ({ numbers }) => {
-    return <button className="square">{numbers}</button>;
+    const onBauttonHandler = () => {
+        setValue("X");
+    };
+
+    return (
+        <button className={st.squaer} onClick={onBauttonHandler}>
+            {value}
+        </button>
+    );
 };

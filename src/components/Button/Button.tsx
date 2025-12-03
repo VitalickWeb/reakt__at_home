@@ -15,10 +15,7 @@ export const Button: FC<ButtonType> = ({ title, numbers, onClick }) => {
     return (
         <div className={st.button_container}>
             <button className={st.univerasl_btn} onClick={onBauttonHandler}>
-                {/* Если title существует, отображаем его */}
                 {title && <span className={st.buttonTitle}>{title}</span>}
-
-                {/* Если numbers существует, отображаем его */}
                 {numbers && <span className={st.buttonNumber}>{numbers}</span>}
             </button>
         </div>
