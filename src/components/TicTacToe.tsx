@@ -28,7 +28,11 @@ export const Board: FC<BoardType> = ({ arrNums }) => {
             );
         });
 
-        return <tr key={rowIndex}>{renderCells}</tr>;
+        return (
+            <tr key={rowIndex} className={st.row_box}>
+                {renderCells}
+            </tr>
+        );
     });
 
     return (

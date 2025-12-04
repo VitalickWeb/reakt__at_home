@@ -4,21 +4,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    margin: 0;
 }
 table {
     border-collapse: collapse; /* Убираем двойные границы между ячейками */
     background-color: #e9f5f793;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Легкая тень */
-    border-radius: 5px; /* Слегка скругляем таблицу */
-    overflow: hidden; /* Важно, чтобы тень и скругление работали корректно */
+    padding: 0;
+    margin: 0;
+}
+tbody {
+    padding: 0;
+    margin: 0;
+}
+tr {
+    height: 45px;
+    margin: 0;
 }
 td {
     border: 1px solid #ddd;
-    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    height: inherit;
 }
 
 .board_row {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 0;
 }
