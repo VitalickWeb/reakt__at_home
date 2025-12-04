@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import st from "./TicTacToe.module.css";
+import st from "./Board.module.css";
 import { Square } from "./Squaer";
 
 const chunkArray = (arr: number[], size: number) => {

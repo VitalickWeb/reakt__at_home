@@ -5,7 +5,7 @@ import { Products } from "./components/Products/Products";
 import { Users } from "./components/Users/Users";
 import { Gallery } from "./components/Gallery/Gallery";
 import { TodoList } from "./components/TodoList/TodoList";
-import { Board } from "./components/TicTacToe";
+import { Board } from "./components/Board";
 
 export const App = () => {
     const person = {
@@ -48,9 +48,7 @@ export const App = () => {
 
     const onSquareHandler = () => {};
 
-    const arrNums: number[] = ([
-        1, 2, 3, 4, 5, 6, 7, 8, 9,
-    ]);
+    const arrNums: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
     return (
         <>
