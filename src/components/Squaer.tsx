@@ -1,15 +1,14 @@
 import { useState, type FC } from "react";
 import st from "./Squaer.module.css";
 
-export type SquareType = object;
+export type SquareType = {
+    value: null[];
+};
 
-export const Square: FC<SquareType> = () => {
-    const [cross, setCross] = useState<string | null>(null);
+export const Square: FC<SquareType> = ({ value }) => {
+    const [cross, setCross] = useState<string | null[]>(value);
 
     const onBauttonHandler = () => {
-        if (cross !== null) {
-            return;
-        }
         setCross("X");
     };
 
