@@ -5,5 +5,5 @@ button.squaer {
     background-color: rgba(76, 77, 92, 0.438);
     font-size: 18px;
     text-align: center;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.562);
 }

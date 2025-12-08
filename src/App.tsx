@@ -46,13 +46,9 @@ export const App = () => {
         setCount(0);
     };
 
-    const onSquareHandler = () => {};
-
-    const arrNums: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
     return (
         <>
-            <Board title="" arrNums={arrNums} onClick={onSquareHandler} />
+            <Board />
 
             <Users users={user} title={title} count={count} />
             <Button title="Count" onClick={onCountHandler} />

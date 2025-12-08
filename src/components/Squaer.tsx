@@ -1,16 +1,21 @@
-import { useState } from "react";
+import { useState, type FC } from "react";
 import st from "./Squaer.module.css";
 
-export const Square = () => {
-    const [value, setValue] = useState<string | null>(null);
+export type SquareType = object;
+
+export const Square: FC<SquareType> = () => {
+    const [cross, setCross] = useState<string | null>(null);
 
     const onBauttonHandler = () => {
-        setValue("X");
+        if (cross !== null) {
+            return;
+        }
+        setCross("X");
     };
 
     return (
         <button className={st.squaer} onClick={onBauttonHandler}>
-            {value}
+            {cross}
         </button>
     );
 };
