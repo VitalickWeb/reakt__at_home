@@ -7,27 +7,55 @@ export type BoardType = object;
 export const Board: FC<BoardType> = () => {
     const [squares, setSquares] = useState(Array(9).fill(null));
 
-    const addValueInSquare = () => {
-        setSquares(squares);
-        console.log("X");
+    const addValueInSquare = (i: number) => {
+        const nextSquares = squares.slice();
+        nextSquares[i] = "X";
+        setSquares(nextSquares);
     };
 
     return (
         <>
             <div className={st.boardRow}>
-                <Square value={squares[0]} onClick={addValueInSquare} />
-                <Square value={squares[1]} onClick={addValueInSquare} />
-                <Square value={squares[2]} onClick={addValueInSquare} />
+                <Square
+                    value={squares[0]}
+                    onClick={() => addValueInSquare(0)}
+                />
+                <Square
+                    value={squares[1]}
+                    onClick={() => addValueInSquare(1)}
+                />
+                <Square
+                    value={squares[2]}
+                    onClick={() => addValueInSquare(2)}
+                />
             </div>
             <div className={st.boardRow}>
-                <Square value={squares[3]} onClick={addValueInSquare} />
-                <Square value={squares[4]} onClick={addValueInSquare} />
-                <Square value={squares[5]} onClick={addValueInSquare} />
+                <Square
+                    value={squares[3]}
+                    onClick={() => addValueInSquare(3)}
+                />
+                <Square
+                    value={squares[4]}
+                    onClick={() => addValueInSquare(4)}
+                />
+                <Square
+                    value={squares[5]}
+                    onClick={() => addValueInSquare(5)}
+                />
             </div>
             <div className={st.boardRow}>
-                <Square value={squares[6]} onClick={addValueInSquare} />
-                <Square value={squares[7]} onClick={addValueInSquare} />
-                <Square value={squares[8]} onClick={addValueInSquare} />
+                <Square
+                    value={squares[6]}
+                    onClick={() => addValueInSquare(6)}
+                />
+                <Square
+                    value={squares[7]}
+                    onClick={() => addValueInSquare(7)}
+                />
+                <Square
+                    value={squares[8]}
+                    onClick={() => addValueInSquare(8)}
+                />
             </div>
         </>
     );
