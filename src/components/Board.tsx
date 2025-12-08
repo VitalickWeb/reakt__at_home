@@ -7,22 +7,27 @@ export type BoardType = object;
 export const Board: FC<BoardType> = () => {
     const [squares, setSquares] = useState(Array(9).fill(null));
 
+    const addValueInSquare = () => {
+        setSquares(squares);
+        console.log("X");
+    };
+
     return (
         <>
             <div className={st.boardRow}>
-                <Square value={squares[0]} />
-                <Square value={squares[1]} />
-                <Square value={squares[2]} />
+                <Square value={squares[0]} onClick={addValueInSquare} />
+                <Square value={squares[1]} onClick={addValueInSquare} />
+                <Square value={squares[2]} onClick={addValueInSquare} />
             </div>
             <div className={st.boardRow}>
-                <Square value={squares[3]} />
-                <Square value={squares[4]} />
-                <Square value={squares[5]} />
+                <Square value={squares[3]} onClick={addValueInSquare} />
+                <Square value={squares[4]} onClick={addValueInSquare} />
+                <Square value={squares[5]} onClick={addValueInSquare} />
             </div>
             <div className={st.boardRow}>
-                <Square value={squares[6]} />
-                <Square value={squares[7]} />
-                <Square value={squares[8]} />
+                <Square value={squares[6]} onClick={addValueInSquare} />
+                <Square value={squares[7]} onClick={addValueInSquare} />
+                <Square value={squares[8]} onClick={addValueInSquare} />
             </div>
         </>
     );
