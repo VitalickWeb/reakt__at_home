@@ -9,6 +9,10 @@ export const Board: FC<BoardType> = () => {
     const [squares, setSquares] = useState(Array(9).fill(null));
 
     const addValueInSquare = (i: number) => {
+        if (squares[i]) {
+            return;
+        }
+
         const nextSquares = [...squares];
         if (xIsNext) {
             nextSquares[i] = "X";
