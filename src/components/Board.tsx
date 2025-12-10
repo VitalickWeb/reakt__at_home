@@ -5,11 +5,17 @@ import { Square } from "./Squaer";
 export type BoardType = object;
 
 export const Board: FC<BoardType> = () => {
+    const [xIsNext, setXIsNext] = useState<boolean>(true);
     const [squares, setSquares] = useState(Array(9).fill(null));
 
     const addValueInSquare = (i: number) => {
-        const nextSquares = squares.slice();
-        nextSquares[i] = "X";
+        const nextSquares = [...squares];
+        if (xIsNext) {
+            nextSquares[i] = "X";
+        } else {
+            nextSquares[i] = "0";
+        }
+        setXIsNext(!xIsNext);
         setSquares(nextSquares);
     };
 
